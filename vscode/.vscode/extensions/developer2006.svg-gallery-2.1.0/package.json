@@ -1,0 +1,105 @@
+{
+	"name": "svg-gallery",
+	"displayName": "SVG Gallery",
+	"description": "View SVG images in gallery",
+	"version": "2.1.0",
+	"publisher": "developer2006",
+	"icon": "images/logo.png",
+	"engines": {
+		"vscode": "^1.43.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"icon",
+		"svg",
+		"viewer"
+	],
+	"galleryBanner": {
+		"color": "#37699A",
+		"theme": "dark"
+	},
+	"activationEvents": [
+		"*"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "SVGGallery.open",
+				"title": "Open in SVG Gallery",
+				"category": "File"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "SVGGallery.open",
+					"when": "explorerResourceIsFolder || resourceFilename =~ /.+\\.svg$/i"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "SVGGallery.open",
+					"when": "explorerResourceIsFolder || resourceFilename =~ /.+\\.svg$/i",
+					"group": "SVGGallery@1"
+				}
+			],
+			"editor/context": [
+				{
+					"command": "SVGGallery.open",
+					"when": "explorerResourceIsFolder || resourceFilename =~ /.+\\.svg$/i",
+					"group": "SVGGallery@1"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"watch": "webpack --mode development --watch --info-verbosity verbose"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.43.0",
+		"@typescript-eslint/eslint-plugin": "^2.26.0",
+		"@typescript-eslint/parser": "^2.26.0",
+		"clean-webpack-plugin": "^3.0.0",
+		"css-loader": "^3.4.2",
+		"eslint": "^6.8.0",
+		"raw-loader": "^4.0.0",
+		"style-loader": "^1.1.0",
+		"ts-loader": "^6.2.2",
+		"typescript": "^3.7.5",
+		"webpack": "^4.42.0",
+		"webpack-cli": "^3.3.0"
+	},
+	"dependencies": {
+		"ejs": "^3.0.2",
+		"fast-xml-parser": "^3.16.0",
+		"lodash": "^4.17.15",
+		"uuid": "^8.0.0"
+	},
+	"author": "Yongjian Huang",
+	"license": "MIT",
+	"homepage": "https://github.com/codelab2006/svg-gallery#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/codelab2006/svg-gallery.git"
+	},
+	"bugs": {
+		"url": "https://github.com/codelab2006/svg-gallery/issues"
+	},
+	"__metadata": {
+		"id": "7473a68c-6a49-4e5a-bc37-b0f9f37f8795",
+		"publisherId": "caa506a6-b448-4451-8148-f640b2d37b98",
+		"publisherDisplayName": "Yongjian Huang",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1715032009026,
+		"pinned": false,
+		"source": "gallery"
+	}
+}
