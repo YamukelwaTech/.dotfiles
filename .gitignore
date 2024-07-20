@@ -45,3 +45,9 @@ WakaTime.sublime-settings
 .vscode/tags
 Brewfile.lock.json
 private/
+node_modules/
+*.log
+.env
+.zsh_sessions
+.zhistory
+.zshrc.backup

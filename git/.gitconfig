@@ -1,0 +1,13 @@
+[user]
+	name = YamuTech
+	email = 157011521+YamukelwaTech@users.noreply.github.com
+[core]
+	editor = vi
+[push]
+	default = current
+	autoSetupRemote = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
