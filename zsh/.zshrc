@@ -19,6 +19,9 @@ alias gp="git pull"
 alias gps="git push"
 alias gl='git log --pretty=format:"%C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(15,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D" --graph'
 alias ls="eza --icons=always"
+alias create='touch'
+alias delete='rm'
+
 
 # Alias to open a file or directory in the home directory
 openfl() {
